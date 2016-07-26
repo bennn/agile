@@ -15,7 +15,8 @@ is short for:
 
 @codeblock{
   #lang racket/base
-  (require (for-syntax racket/base syntax/parse))
+  (require (for-syntax racket/base syntax/parse)
+           racket/match racket/list)
 
   ....
 }
