@@ -1,7 +1,9 @@
 #lang racket/base
-(require syntax/parse/define
+(require agile/lib/syntax-extension
          racket/match
          racket/list
-         (for-syntax racket/base syntax/parse))
-(provide (all-from-out racket/base syntax/parse/define racket/list racket/match)
-         (for-syntax (all-from-out racket/base syntax/parse)))
+         (for-meta 1 racket/base agile/lib/syntax-extension)
+         (for-meta 2 racket/base))
+(provide (all-from-out racket/base agile/lib/syntax-extension racket/list racket/match)
+         (for-meta 1 (all-from-out racket/base agile/lib/syntax-extension))
+         (for-meta 2 (all-from-out racket/base)))
